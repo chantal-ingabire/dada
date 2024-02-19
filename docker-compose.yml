@@ -1,0 +1,11 @@
+version: '1.1.1'
+services:
+  php:
+    build:
+      context: contextPath
+      dockerfile: Dockerfile
+    image: php:apache-bullseye
+    ports:
+      -8080:82
+    volumes:
+      - ./:var/www/html
